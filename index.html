@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dice</title>
+	<link rel="stylesheet" href="task.css"/>
+	<script type="text/javascript">
+		var p1val=0
+		var p2val=0
+		function p1()
+		{
+			  p1val = Math.floor(Math.random() * 6) + 1;
+			  console.log(p1val)
+			  return p1val;
+
+			  
+		}
+		function p2()
+		{
+			 p2val = Math.floor(Math.random() * 6) + 1;
+			   console.log(p2val)
+			   return p2val;
+			   
+		}
+		function result()
+			{
+				if(p1val==0)
+					{	
+						p1val=0;p2val=0;
+						return "Player 1 please play"}
+				else if(p2val==0)
+					{  	p1val=0;p2val=0;
+					return "Player 2 please play"}
+
+				if(p1val>p2val)
+				{p1val=0;p2val=0;
+					return "Player1 "
+					   console.log("player1")
+				}
+				else if(p1val<p2val)
+				{p1val=0;p2val=0;
+					return "Player2"
+					   console.log("player2")
+				}
+				else if(p1val==p2val)
+				{p1val=0;p2val=0;
+					return "Draw"
+					   console.log("draw")
+				}
+			
+		}
+	</script>
+</head>
+<body>
+<div class="container">
+	<div class="game">
+	<form>
+		<div class="display">
+			<input type="text" name="display" />
+		</div>
+		<div >
+			<input type="button" value="Player1" onclick="display.value=p1()+' Player1'"/>
+			<input type="button" value="Player2" onclick="display.value=p2()+' Player2'"/>
+			<input type="button" value="Result" onclick="display.value=result()+' is the winner'"/>
+		</div>
+</form>
+</div>
+</div>
+
+</body>
+</html>
