@@ -5,13 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dice</title>
 	<link rel="stylesheet" href="task.css"/>
-	<script type="text/javascript">
+	 <script type="text/javascript">
 		var p1val=0
 		var p2val=0
 		function p1()
 		{
 			  p1val = Math.floor(Math.random() * 6) + 1;
 			  console.log(p1val)
+			  document.querySelector(".img1").setAttribute("src",
+                "dice" + p1val+ ".png");
 			  return p1val;
 
 			  
@@ -20,6 +22,8 @@
 		{
 			 p2val = Math.floor(Math.random() * 6) + 1;
 			   console.log(p2val)
+			    document.querySelector(".img2").setAttribute("src",
+                "dice" + p2val+ ".png");
 			   return p2val;
 			   
 		}
@@ -50,19 +54,27 @@
 				}
 			
 		}
-	</script>
+	</script> 
 </head>
 <body>
 <div class="container">
 	<div class="game">
 	<form>
 		<div class="display">
-			<input type="text" name="display" />
+			<input type="text" name="display1" />
+			 
+
 		</div>
+		<div class="dice">
+			<img class="img1" src="dice6.png" >
+			<img class="img2" src="dice6.png" style="margin-left:10%">
+		</div>
+		
 		<div >
-			<input type="button" value="Player1" onclick="display.value=p1()+' Player1'"/>
-			<input type="button" value="Player2" onclick="display.value=p2()+' Player2'"/>
-			<input type="button" value="Result" onclick="display.value=result()"/>
+			
+			<input type="button" value="Player1" onclick =" a=p1();display1.value=a+' Player1'"/>
+			<input type="button" value="Player2" onclick =" b=p2();display1.value=b+' Player2'"  />
+			<input type="button" value="Result"  onclick =" display1.value=result()"/>
 		</div>
 </form>
 </div>

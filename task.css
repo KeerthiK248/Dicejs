@@ -18,7 +18,12 @@ padding:0;
 	padding:20px;
 	border-radius: 10px;
 	width:30%;
-	height:20vh;
+	height:40vh;
+}
+.image
+{
+	width:100%;
+	background-color: black;
 }
 .display
 {
